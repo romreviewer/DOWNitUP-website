@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOWNitUP - Accelerate Your Downloads</title>
+    <meta name="description" content="DOWNitUP is a powerful, cross-platform download manager that supports HTTP and BitTorrent protocols, accelerating your downloads up to 16x.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Placeholder for user's attached app icon -->
+    <link rel="icon" type="image/png" href="assets/app_icon.png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="assets/app_icon.png" alt="DOWNitUP Logo" class="logo-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzQzYjVlYyI+PHBhdGggZD0iTTEyIDJDMiAyIDIgMTIgMiAxMnMyIDEwIDEwIDEwIDEwLTEwIDEwLTEwUzIyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6bS0xLThMMTEgOGgydjRoMmwtMyA0LTMtNHoiLz48L3N2Zz4='">
+                <span class="logo-text">DOWNitUP</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#platforms">Platforms</a>
+                <a href="#platforms" class="btn btn-primary nav-cta">Get DOWNitUP</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="glow-bg top-right"></div>
+        <div class="glow-bg bottom-left"></div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">🚀 v0.1.0 Beta is out!</div>
+                <h1 class="hero-title">Download Faster, Smarter, <span class="text-gradient">Anywhere.</span></h1>
+                <p class="hero-subtitle">The ultimate cross-platform download manager. Accelerate your downloads up to 16x with intelligent multi-connection support and built-in torrent capabilities.</p>
+                
+                <div class="hero-cta-group">
+                    <a href="#platforms" class="btn btn-glow btn-large" id="main-download-btn">
+                        <span class="btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        </span>
+                        Download for <span id="os-name">your OS</span>
+                    </a>
+                </div>
+                <p class="hero-version">Free to use forever.</p>
+            </div>
+
+            <div class="hero-visual">
+                <!-- App Presentation Box / Ad Placeholder area -->
+                <div class="app-showcase glass-panel">
+                    <div class="mac-buttons">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="app-content">
+                        <div class="ad-placeholder-area">
+                            <img src="assets/app_icon.png" alt="DOWNitUP App" class="showcase-icon floating" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzQzYjVlYyI+PHBhdGggZD0iMTEgMmgydjEyTDEzIDE0SDExel0iLz48cGF0aCBkPSJNOS43MSAxLjcxTDEyIDEyLjI5bDIuMjktMi4yOWwxLjQyIDEuNDJMMTIgMTUuMTNsLTMuNzEtMy43MXoiLz48L3N2Zz4='">
+                            <div class="download-animation">
+                                <div class="file-info-row">
+                                    <span class="file-name">ubuntu-24.04-desktop-amd64.iso</span>
+                                    <span class="speed">16.4 MB/s</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="download-stats">
+                                    <span>Downloading...</span>
+                                    <span>2.4 GB / 5.7 GB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Everything You Need in a <span class="text-gradient">Downloader</span></h2>
+                <p>Features engineered for high-performance retrieval and native cross-platform perfection.</p>
+            </div>
+            
+            <div class="features-grid">
+                
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon glow-icon">🚀</div>
+                    <h3 class="feature-title">Blazing Fast</h3>
+                    <p class="feature-desc">Utilizes multi-connection chunks to download files up to 16x faster than standard browsers. Intelligent chunk sizing keeps your bandwidth saturated.</p>
+                </div>
+
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon glow-icon">🧲</div>
+                    <h3 class="feature-title">HTTP & Torrent Support</h3>
+                    <p class="feature-desc">Handles both raw HTTP file downloads and magnet links within one unified interface. Powered by the incredibly fast libtorrent4j engine.</p>
+                </div>
+
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon glow-icon">🌐</div>
+                    <h3 class="feature-title">Truly Cross-Platform</h3>
+                    <p class="feature-desc">Built completely with Kotlin Multiplatform. Experience a 100% native feel across Windows, macOS, Linux, and Android devices natively.</p>
+                </div>
+
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon glow-icon">⚡</div>
+                    <h3 class="feature-title">Smart Resumability</h3>
+                    <p class="feature-desc">Network error? System restart? Real-time progress tracking and intelligent fallback ensure you never lose a partial download.</p>
+                </div>
+
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon glow-icon">🌗</div>
+                    <h3 class="feature-title">Modern Material 3 UI</h3>
+                    <p class="feature-desc">A beautiful, distraction-free interface with a system-adaptive Dark Mode that is easy on the eyes and a joy to use daily.</p>
+                </div>
+
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon glow-icon">🛡️</div>
+                    <h3 class="feature-title">Privacy Focused</h3>
+                    <p class="feature-desc">No hidden trackers, no spooky background tasks. Enjoy securely isolated file management and intelligent error recovery without compromise.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Download / Platforms Section -->
+    <section class="platforms" id="platforms">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Available on <span class="text-gradient">Your Device</span></h2>
+                <p>Take DOWNitUP with you everywhere you go.</p>
+            </div>
+            
+            <div class="platform-container">
+                
+                <!-- Windows -->
+                <div class="platform-card glass-panel">
+                    <div class="platform-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M2.5 5.5l7-1v6.5h-7zm0 7.5h7v6.5l-7-1zm8-8.5l9.5-1.5v8.5h-9.5zm0 9.5h9.5v8.5l-9.5-1.5z"/></svg>
+                    </div>
+                    <h3>Windows</h3>
+                    <p>Requirements: Windows 10/11 (64-bit)</p>
+                    <a href="#" class="btn btn-secondary platform-btn">Download .exe</a>
+                </div>
+
+                <!-- macOS -->
+                <div class="platform-card glass-panel">
+                    <div class="platform-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M16 1c-1.34 0-2.88.58-3.79 1.48C11.36 3.32 10.74 4.86 11.16 6.32c1.47.05 3.01-.58 3.96-1.54C16.03 3.84 16.65 2.37 16 1zm1.21 4.96c-1.14-.07-2.48.56-3.19 1.19-.7.63-1.87 1.15-2.8 1.15-1.4 0-2.61-.7-3.8-1.29-1.3-.67-2.92-1.22-4.44-1.22C1.49 5.79 0 8.08 0 12.06c0 4.14 1.83 8.32 4.41 10.59 1.15.98 2.54 1.4 3.88 1.34 1.25-.06 2.05-.6 3.51-.6s2.21.57 3.57.57c1.33 0 2.52-.39 3.54-1.18 1.44-1.12 2.51-2.92 3.25-4.52-1.78-.71-2.92-2.31-2.95-4.2-.03-2.14 1.41-3.73 3.25-4.47-1.12-1.68-2.91-2.75-4.81-2.83h-.18z"/></svg>
+                    </div>
+                    <h3>macOS</h3>
+                    <p>Requirements: macOS 11+ (Apple Silicon or Intel)</p>
+                    <a href="#" class="btn btn-secondary platform-btn">Download .dmg</a>
+                </div>
+
+                <!-- Linux -->
+                <div class="platform-card glass-panel">
+                    <div class="platform-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M15 16s0 3 2 3-2 3-2 3-2-2-2-2-1 2-1 2-2-3 2-3c0 0 1-3 1-3s1 1 2 1zm1-9c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm1-2s2 2 2 4c0 1.5-.5 3-1.5 4 0 0-2-3-4-3S9 13 9 13c-1-1-1.5-2.5-1.5-4 0-2 2-4 2-4s1 2 2 2c1 0 2-2 2-2s1.5 1 2.5 1zm1.5-1h1A1.5 1.5 0 0 1 20 5.5v2A1.5 1.5 0 0 1 18.5 9h-.5A2.5 2.5 0 0 0 18.5 4zm-14 0A2.5 2.5 0 0 1 5.5 9h-.5A1.5 1.5 0 0 1 3.5 7.5v-2A1.5 1.5 0 0 1 5 4h1z"/></svg>
+                    </div>
+                    <h3>Linux</h3>
+                    <p>Requirements: Any modern distribution</p>
+                    <a href="#" class="btn btn-secondary platform-btn">Download .AppImage</a>
+                </div>
+
+                <!-- Android -->
+                <div class="platform-card glass-panel">
+                    <div class="platform-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0004s.4482-1.0003.9993-1.0003c.5511 0 .9993.4485.9993 1.0003s-.4482 1.0004-.9993 1.0004m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0004s.4482-1.0003.9993-1.0003c.5511 0 .9993.4485.9993 1.0003s-.4482 1.0004-.9993 1.0004m11.4045-6.02L19.78 6.0125a.4158.4158 0 0 0-.1507-.5676.4162.4162 0 0 0-.5665.1506l-1.939 3.364c-1.4782-.6765-3.1593-1.0526-4.9623-1.0526s-3.4841.3761-4.9623 1.0526l-1.939-3.364a.4172.4172 0 0 0-.5665-.1506.4155.4155 0 0 0-.1507.5676l1.8985 3.3089C3.606 10.9754 1.5165 14.12 1.25 17.8427h21.5c-.2665-3.7226-2.356-6.8673-4.8685-8.5213"/></svg>
+                    </div>
+                    <h3>Android</h3>
+                    <p>Requirements: Android 7.0 (Nougat) and up</p>
+                    <a href="#" class="btn btn-secondary platform-btn">Download .apk</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/app_icon.png" alt="DOWNitUP Logo" class="logo-img-small" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzQzYjVlYyI+PHBhdGggZD0iMTEgMmgydjEyTDEzIDE0SDExel0iLz48cGF0aCBkPSJNOS43MSAxLjcxTDEyIDEyLjI5bDIuMjktMi4yOWwxLjQyIDEuNDJMMTIgMTUuMTNsLTMuNzEtMy43MXoiLz48L3N2Zz4='">
+                    <span>DOWNitUP</span>
+                </div>
+                <p>The modern toolkit for rapid file retrieval across platforms.</p>
+            </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Resources</h4>
+                    <a href="#">Get Started</a>
+                    <a href="#">Roadmap</a>
+                    <a href="#">Releases</a>
+                </div>
+                <div class="links-column">
+                    <h4>Community</h4>
+                    <a href="#">Report an Issue</a>
+                    <a href="#">Discussions</a>
+                    <a href="#">Testimonials</a>
+                </div>
+                <div class="links-column">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+                <!-- Optional Links to add later -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DOWNitUP Project. Released under MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

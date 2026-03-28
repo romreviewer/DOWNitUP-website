@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - DOWNitUP</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/app_icon.png">
+    <style>
+        .privacy-content h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .privacy-content h2 { font-size: 1.8rem; margin-top: 40px; margin-bottom: 15px; color: var(--primary-light); }
+        .privacy-content h3 { font-size: 1.2rem; margin-top: 25px; margin-bottom: 10px; }
+        .privacy-content p { margin-bottom: 16px; color: var(--text-muted); }
+        .privacy-content ul { margin-bottom: 16px; padding-left: 20px; color: var(--text-muted); }
+        .privacy-content li { margin-bottom: 8px; }
+        .privacy-content strong { color: var(--text-main); }
+        .privacy-content a { color: var(--primary); text-decoration: none; }
+        .privacy-content a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/app_icon.png" alt="DOWNitUP Logo" class="logo-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzQzYjVlYyI+PHBhdGggZD0iMTEgMmgydjEyTDEzIDE0SDExel0iLz48cGF0aCBkPSJNOS43MSAxLjcxTDEyIDEyLjI5bDIuMjktMi4yOWwxLjQyIDEuNDJMMTIgMTUuMTNsLTMuNzEtMy43MXoiLz48L3N2Zz4='">
+                <span class="logo-text">DOWNitUP</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#platforms">Platforms</a>
+                <a href="index.html#platforms" class="btn btn-primary nav-cta">Get DOWNitUP</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Privacy Section -->
+    <section style="padding: 140px 24px 80px; max-width: 900px; margin: 0 auto;">
+        <div class="glass-panel privacy-content" style="padding: 50px; border-radius: 20px;">
+            <h1>Privacy Policy for DOWNitUP</h1>
+            <p><strong>Last Updated:</strong> March 28, 2026</p>
+
+            <h2>Introduction</h2>
+            <p>DOWNitUP ("we", "our", or "the app") is a cross-platform file downloader supporting HTTP and Torrent protocols, available on Android, iOS, and Desktop. This Privacy Policy explains how the app handles your information.</p>
+
+            <h2>Information We Collect</h2>
+            <h3>Information You Provide</h3>
+            <ul>
+                <li><strong>Download URLs and Magnet Links:</strong> When you add a download, the app processes the URL or magnet link you provide to initiate the download. These are stored locally on your device in a local database.</li>
+                <li><strong>File Data:</strong> Downloaded files are saved to your device's local storage (e.g., the Downloads folder).</li>
+            </ul>
+
+            <h3>Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Remote Configuration:</strong> The app fetches configuration data from our remote server to retrieve app settings such as default connection counts and sample links. This request does not include any personally identifiable information.</li>
+            </ul>
+
+            <h3>Information We Do NOT Collect</h3>
+            <ul>
+                <li>We do <strong>not</strong> collect personal information such as your name, email address, or phone number.</li>
+                <li>We do <strong>not</strong> collect analytics, usage statistics, or crash reports.</li>
+                <li>We do <strong>not</strong> track your browsing activity or download history on our servers.</li>
+                <li>We do <strong>not</strong> use advertising SDKs or tracking frameworks.</li>
+                <li>We do <strong>not</strong> collect or transmit your IP address for tracking purposes (though your IP address is inherently visible to download servers and torrent peers as part of normal network communication).</li>
+            </ul>
+
+            <h2>Permissions</h2>
+            <p>The app requests the following permissions to function:</p>
+            <ul>
+                <li><strong>Internet Access:</strong> Required to download files and fetch remote configuration.</li>
+                <li><strong>Storage Access (Android 9 and below):</strong> Required to save downloaded files to your device.</li>
+                <li><strong>Notifications (Android 13+):</strong> Used to display download progress and completion notifications. You can deny or revoke this permission at any time.</li>
+                <li><strong>Foreground Service:</strong> Used to keep downloads running reliably in the background on Android.</li>
+                <li><strong>Wake Lock:</strong> Used to prevent the device from sleeping during active downloads.</li>
+            </ul>
+
+            <h2>Data Storage</h2>
+            <p>All data is stored locally on your device:</p>
+            <ul>
+                <li><strong>Download metadata</strong> (URLs, file names, progress, status) is stored in a local SQLite database.</li>
+                <li><strong>Downloaded files</strong> are stored in your device's Downloads directory or a user-specified location.</li>
+                <li><strong>App settings</strong> are stored locally using platform-specific preferences.</li>
+            </ul>
+            <p>No user data is uploaded to or stored on our servers.</p>
+
+            <h2>Torrent Downloads</h2>
+            <p>When using torrent/magnet link downloads, your device communicates directly with other peers in the BitTorrent network. This is inherent to how the BitTorrent protocol works and means:</p>
+            <ul>
+                <li>Your IP address is visible to other peers in the torrent swarm.</li>
+                <li>File pieces are exchanged directly between your device and other peers.</li>
+                <li>We have no control over what other peers in the network may log.</li>
+            </ul>
+
+            <h2>Third-Party Services</h2>
+            <p>The app connects to the following external services:</p>
+            <ul>
+                <li><strong>Remote Server</strong> — To fetch app configuration (no personal data is sent).</li>
+                <li><strong>Download servers</strong> — Whatever servers host the files you choose to download.</li>
+                <li><strong>BitTorrent DHT/tracker networks</strong> — When downloading via torrent/magnet links.</li>
+            </ul>
+            <p>We do not integrate any third-party analytics, advertising, or social media SDKs.</p>
+
+            <h2>Data Sharing</h2>
+            <p>We do not sell, trade, or otherwise transfer your information to third parties. We do not have access to your download history or files.</p>
+
+            <h2>Children's Privacy</h2>
+            <p>The app does not knowingly collect any personal information from children under 13. Since the app does not collect personal information from any user, no special provisions are necessary.</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last Updated" date at the top of this document. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+            <h2>Contact</h2>
+            <p>If you have questions about this Privacy Policy, please contact us at:</p>
+            <ul>
+                <li><strong>Developer:</strong> ROM Reviewer Tools</li>
+                <li><strong>Website:</strong> <a href="https://romreviewer.com" target="_blank">romreviewer.com</a></li>
+            </ul>
+
+            <h2>Summary</h2>
+            <p>DOWNitUP is a privacy-friendly download manager. All your data stays on your device. We don't collect, store, or share your personal information.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/app_icon.png" alt="DOWNitUP Logo" class="logo-img-small" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzQzYjVlYyI+PHBhdGggZD0iMTEgMmgydjEyTDEzIDE0SDExel0iLz48cGF0aCBkPSJNOS43MSAxLjcxTDEyIDEyLjI5bDIuMjktMi4yOWwxLjQyIDEuNDJMMTIgMTUuMTNsLTMuNzEtMy43MXoiLz48L3N2Zz4='">
+                    <span>DOWNitUP</span>
+                </div>
+                <p>The modern toolkit for rapid file retrieval across platforms.</p>
+            </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Resources</h4>
+                    <a href="index.html#home">Get Started</a>
+                    <a href="#">Roadmap</a>
+                    <a href="#">Releases</a>
+                </div>
+                <div class="links-column">
+                    <h4>Community</h4>
+                    <a href="#">Report an Issue</a>
+                    <a href="#">Discussions</a>
+                    <a href="#">Testimonials</a>
+                </div>
+                <!-- Legal Column -->
+                <div class="links-column">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DOWNitUP Project. Released under MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
