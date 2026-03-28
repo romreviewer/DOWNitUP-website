@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | DOWNitUP</title>
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/assets/app_icon.png">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .error-content {
+            position: relative;
+            z-index: 10;
+            max-width: 520px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -4px;
+            margin-bottom: 16px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .error-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .error-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .error-icon {
+            margin-bottom: 24px;
+        }
+        .error-icon img {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="/assets/app_icon.png" alt="DOWNitUP Logo" class="logo-img">
+                <span class="logo-text">DOWNitUP</span>
+            </a>
+            <div class="nav-links">
+                <a href="/#features">Features</a>
+                <a href="/#platforms">Platforms</a>
+                <a href="/#platforms" class="btn btn-primary nav-cta">Get DOWNitUP</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="error-page">
+        <div class="glow-bg top-right"></div>
+        <div class="glow-bg bottom-left"></div>
+
+        <div class="error-content">
+            <div class="error-icon">
+                <img src="/assets/app_icon.png" alt="DOWNitUP">
+            </div>
+            <div class="error-code">404</div>
+            <h1 class="error-title">Page not found</h1>
+            <p class="error-desc">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+            <a href="/" class="btn btn-glow btn-large">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
