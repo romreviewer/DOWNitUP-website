@@ -2,6 +2,7 @@
 
 const fs = require('node:fs');
 const http = require('node:http');
+const https = require('node:https');
 const path = require('node:path');
 
 const { handleUpdateRequest } = require('./update-api');
@@ -151,8 +152,62 @@ function serveNotFound(req, res) {
   });
 }
 
+let cachedPlaystoreVersion = '1.7.3';
+let lastPlaystoreFetchTime = 0;
+const PLAYSTORE_CACHE_TTL = 604800000; // 1 week
+
+function fetchPlaystoreVersionBackground() {
+  const playstoreUrl = 'https://play.google.com/store/apps/details?id=com.romreviewertools.downitup&hl=en_IN';
+
+  https.get(playstoreUrl, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+  }, (res) => {
+    if (res.statusCode !== 200) {
+      console.error(`Play Store fetch failed with status: ${res.statusCode}`);
+      return;
+    }
+
+    let data = '';
+    res.on('data', (chunk) => {
+      data += chunk;
+    });
+    res.on('end', () => {
+      const match = data.match(/\[\[\["(\d+\.\d+\.\d+)"\]\]/);
+      if (match && match[1]) {
+        cachedPlaystoreVersion = match[1];
+        console.log(`Successfully updated dynamic Play Store version to: ${cachedPlaystoreVersion}`);
+      }
+    });
+  }).on('error', (err) => {
+    console.error('Error fetching Play Store version in background:', err);
+  });
+}
+
+function handlePlaystoreVersionRequest(req, res) {
+  const now = Date.now();
+  if (now - lastPlaystoreFetchTime > PLAYSTORE_CACHE_TTL) {
+    lastPlaystoreFetchTime = now;
+    fetchPlaystoreVersionBackground();
+  }
+
+  sendJson(res, 200, { version: cachedPlaystoreVersion });
+}
+
 function requestListener(req, res) {
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+
+  if (url.pathname === '/api/playstore-version') {
+    if (req.method !== 'GET') {
+      res.writeHead(405, { Allow: 'GET' });
+      res.end();
+      return;
+    }
+
+    handlePlaystoreVersionRequest(req, res);
+    return;
+  }
 
   if (url.pathname === '/checkupdate/downitup/desktop') {
     if (req.method !== 'GET') {

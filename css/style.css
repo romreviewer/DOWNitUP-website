@@ -861,3 +861,238 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* Download & Install Page Styles */
+.download-page {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.download-page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.download-header {
+    text-align: center;
+    max-width: 600px;
+}
+
+.download-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.download-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.download-card {
+    width: 100%;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.countdown-number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary-light);
+    line-height: 1;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: scalePulse 1s ease-in-out infinite;
+}
+
+@keyframes scalePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.countdown-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.countdown-bar-fill {
+    height: 100%;
+    width: 100%;
+    background: var(--primary-gradient);
+    border-radius: 3px;
+    transition: width 1s linear;
+}
+
+.countdown-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.manual-download-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.manual-download-text a {
+    color: var(--primary-light);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.manual-download-text a:hover {
+    color: var(--text-main);
+}
+
+/* Beta Notice Box */
+.notice-box {
+    background: rgba(255, 189, 46, 0.04);
+    border: 1px solid rgba(255, 189, 46, 0.2);
+    border-radius: 16px;
+    padding: 24px 30px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.notice-icon {
+    color: #ffbd2e;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notice-content h3 {
+    color: #ffbd2e;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.notice-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Step-by-Step Instructions */
+.instructions-section {
+    width: 100%;
+}
+
+.instructions-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.step-card {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    border-radius: 16px;
+    align-items: flex-start;
+    transition: var(--transition);
+}
+
+.step-card:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(20, 27, 42, 0.8);
+    transform: translateX(4px);
+}
+
+.step-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
+}
+
+.step-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-main);
+}
+
+.step-details p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.step-highlight {
+    color: var(--primary-light);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .download-page {
+        padding-top: 100px;
+    }
+    
+    .download-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .notice-box {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .step-card {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .step-card:hover {
+        transform: translateY(-2px);
+    }
+}
