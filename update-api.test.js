@@ -115,3 +115,14 @@ test('handles the documented endpoint shape', () => {
   assert.equal(result.body.latest_version_code, 2);
   assert.equal(result.body.latest_version_name, '1.0.1');
 });
+
+test('handles the default release version when no environment overrides are provided', () => {
+  const url = new URL('https://downitup.com/checkupdate/downitup/desktop?version_code=0&version_name=0.9.0&platform=macos&arch=arm64&debug=false');
+  const result = handleUpdateRequest(url, {});
+
+  assert.equal(result.status, 200);
+  assert.equal(result.body.update_available, true);
+  assert.equal(result.body.latest_version_code, 1);
+  assert.equal(result.body.latest_version_name, '1.0.0');
+});
+

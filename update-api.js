@@ -1,10 +1,10 @@
 'use strict';
 
 const DEFAULT_RELEASE = Object.freeze({
-  versionCode: 2,
-  versionName: '1.0.1',
+  versionCode: 1,
+  versionName: '1.0.0',
   title: 'Update available',
-  message: 'DOWNitUP 1.0.1 is available. Download the latest version from the website.',
+  message: 'DOWNitUP 1.0.0 is available. Download the latest version from the website.',
   downloadUrl: 'https://downitup.com',
   releaseNotesUrl: 'https://downitup.com/releases',
   publishedAt: '2026-06-30T00:00:00Z'
