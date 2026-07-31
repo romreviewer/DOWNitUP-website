@@ -152,44 +152,76 @@ function serveNotFound(req, res) {
   });
 }
 
-let cachedPlaystoreVersion = '1.7.3';
+// This is used only if Google Play cannot be reached. Keep it in sync with the
+// most recently published release so a temporary Play Store error never shows a
+// much older version to visitors.
+let cachedPlaystoreVersion = '1.11.0';
 let lastPlaystoreFetchTime = 0;
-const PLAYSTORE_CACHE_TTL = 604800000; // 1 week
+const PLAYSTORE_CACHE_TTL = 6 * 60 * 60 * 1000; // 6 hours
+let playstoreFetchInFlight = null;
 
-function fetchPlaystoreVersionBackground() {
+function refreshPlaystoreVersion() {
+  if (playstoreFetchInFlight) {
+    return playstoreFetchInFlight;
+  }
+
   const playstoreUrl = 'https://play.google.com/store/apps/details?id=com.romreviewertools.downitup&hl=en_IN';
 
-  https.get(playstoreUrl, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    }
-  }, (res) => {
-    if (res.statusCode !== 200) {
-      console.error(`Play Store fetch failed with status: ${res.statusCode}`);
-      return;
-    }
-
-    let data = '';
-    res.on('data', (chunk) => {
-      data += chunk;
-    });
-    res.on('end', () => {
-      const match = data.match(/\[\[\["(\d+\.\d+\.\d+)"\]\]/);
-      if (match && match[1]) {
-        cachedPlaystoreVersion = match[1];
-        console.log(`Successfully updated dynamic Play Store version to: ${cachedPlaystoreVersion}`);
+  playstoreFetchInFlight = new Promise((resolve) => {
+    const request = https.get(playstoreUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       }
+    }, (res) => {
+      if (res.statusCode !== 200) {
+        console.error(`Play Store fetch failed with status: ${res.statusCode}`);
+        res.resume();
+        resolve();
+        return;
+      }
+
+      let data = '';
+      res.on('data', (chunk) => {
+        data += chunk;
+      });
+      res.on('end', () => {
+        // Google Play currently exposes the current version in this nested
+        // payload. Allow two to four numeric components for future releases.
+        const match = data.match(/\[\[\["(\d+(?:\.\d+){1,3})"\]\]/);
+        if (match && match[1]) {
+          cachedPlaystoreVersion = match[1];
+          console.log(`Updated dynamic Play Store version to: ${cachedPlaystoreVersion}`);
+        } else {
+          console.error('Could not find a version in the Play Store response');
+        }
+        resolve();
+      });
     });
-  }).on('error', (err) => {
-    console.error('Error fetching Play Store version in background:', err);
+    request.setTimeout(10000, () => request.destroy(new Error('Play Store request timed out')));
+    request.on('error', (err) => {
+      console.error('Error fetching Play Store version:', err);
+      resolve();
+    });
+  });
+
+  return playstoreFetchInFlight.finally(() => {
+    playstoreFetchInFlight = null;
   });
 }
 
 function handlePlaystoreVersionRequest(req, res) {
   const now = Date.now();
-  if (now - lastPlaystoreFetchTime > PLAYSTORE_CACHE_TTL) {
-    lastPlaystoreFetchTime = now;
-    fetchPlaystoreVersionBackground();
+  const cacheExpired = now - lastPlaystoreFetchTime >= PLAYSTORE_CACHE_TTL;
+  if (cacheExpired || playstoreFetchInFlight) {
+    if (cacheExpired) {
+      lastPlaystoreFetchTime = now;
+    }
+    // Wait for the refresh so the first visitor after a new rollout does not
+    // receive the stale cached version. Concurrent requests share it too.
+    refreshPlaystoreVersion().finally(() => {
+      sendJson(res, 200, { version: cachedPlaystoreVersion });
+    });
+    return;
   }
 
   sendJson(res, 200, { version: cachedPlaystoreVersion });

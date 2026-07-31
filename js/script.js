@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             heroVersionText.textContent = 'v1.0.0 is available for macOS. Also available on Windows & Android.';
         } else if (os === 'android') {
-            const fallbackVersion = '1.7.3';
+            const fallbackVersion = '1.11.0';
             heroVersionText.textContent = `v${fallbackVersion} is available on Google Play. Also available on Windows & macOS.`;
             const heroBadge = document.querySelector('.hero-badge');
             if (heroBadge) {
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Fetch Play Store version dynamically from our backend API
-            fetch('/api/playstore-version')
+            fetch('/api/playstore-version', { cache: 'no-store' })
                 .then(res => res.json())
                 .then(data => {
                     if (data && data.version) {
