@@ -1,13 +1,13 @@
 'use strict';
 
 const DEFAULT_RELEASE = Object.freeze({
-  versionCode: 1,
-  versionName: '1.0.0',
+  versionCode: 2,
+  versionName: '1.0.1',
   title: 'Update available',
-  message: 'DOWNitUP 1.0.0 is available. Download the latest version from the website.',
+  message: 'DOWNitUP 1.0.1 is available. Download the latest version from the website.',
   downloadUrl: 'https://downitup.com',
   releaseNotesUrl: 'https://downitup.com/releases',
-  publishedAt: '2026-06-30T00:00:00Z'
+  publishedAt: '2026-08-03T00:00:00Z'
 });
 
 const PLATFORMS = new Set(['macos', 'windows', 'linux', 'unknown']);

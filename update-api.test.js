@@ -122,7 +122,7 @@ test('handles the default release version when no environment overrides are prov
 
   assert.equal(result.status, 200);
   assert.equal(result.body.update_available, true);
-  assert.equal(result.body.latest_version_code, 1);
-  assert.equal(result.body.latest_version_name, '1.0.0');
+  assert.equal(result.body.latest_version_code, 2);
+  assert.equal(result.body.latest_version_name, '1.0.1');
 });
 

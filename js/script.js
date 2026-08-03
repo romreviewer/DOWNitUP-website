@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </svg>
                 Download for Windows
             `;
-            heroVersionText.textContent = 'v1.0.0 is available for Windows. Also available on macOS & Android.';
+            heroVersionText.textContent = 'v1.0.1 is available for Windows. Also available on macOS & Android.';
         } else if (os === 'mac') {
             mainDownloadBtn.href = 'download-mac';
             mainDownloadBtn.removeAttribute('target');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </svg>
                 Download for macOS
             `;
-            heroVersionText.textContent = 'v1.0.0 is available for macOS. Also available on Windows & Android.';
+            heroVersionText.textContent = 'v1.0.1 is available for macOS. Also available on Windows & Android.';
         } else if (os === 'android') {
             const fallbackVersion = '1.11.0';
             heroVersionText.textContent = `v${fallbackVersion} is available on Google Play. Also available on Windows & macOS.`;
