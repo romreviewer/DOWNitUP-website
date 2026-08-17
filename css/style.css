@@ -1360,6 +1360,11 @@ a {
     color: var(--text-main);
 }
 
+.article-body a.btn-glow {
+    color: white;
+    text-decoration: none;
+}
+
 .article-body code {
     background: rgba(255, 255, 255, 0.08);
     border-radius: 4px;

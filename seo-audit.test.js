@@ -100,6 +100,19 @@ test('footer wordmark has an explicit high-contrast color', () => {
   assert.match(footerWordmarkRule, /opacity\s*:\s*1\s*;/i);
 });
 
+test('article CTA buttons preserve their high-contrast button label', () => {
+  const css = fs.readFileSync(path.join(ROOT, 'css', 'style.css'), 'utf8');
+  const articleCtaButtonRule = matchContent(
+    css,
+    /\.article-body\s+a\.btn-glow\s*\{([^}]+)\}/i,
+    'article CTA button rule',
+    path.join(ROOT, 'css', 'style.css')
+  );
+
+  assert.match(articleCtaButtonRule, /color\s*:\s*white\s*;/i);
+  assert.match(articleCtaButtonRule, /text-decoration\s*:\s*none\s*;/i);
+});
+
 test('release manifest contains verifiable desktop artifacts', () => {
   for (const platform of ['windows', 'macos', 'linux']) {
     const release = releases.platforms[platform];
