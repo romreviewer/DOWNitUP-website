@@ -18,6 +18,14 @@
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+.logo-text {
+    color: var(--text-main);
+}
+
+.logo-accent {
+    color: var(--primary-light);
+}
+
 * {
     margin: 0;
     padding: 0;
