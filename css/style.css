@@ -740,6 +740,11 @@ a {
     font-size: 1.4rem;
 }
 
+.footer-logo > span {
+    color: var(--text-main);
+    opacity: 1;
+}
+
 .logo-img-small {
     width: 24px;
     height: 24px;

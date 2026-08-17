@@ -87,6 +87,19 @@ test('internal links resolve to public files and use clean URLs', () => {
   }
 });
 
+test('footer wordmark has an explicit high-contrast color', () => {
+  const css = fs.readFileSync(path.join(ROOT, 'css', 'style.css'), 'utf8');
+  const footerWordmarkRule = matchContent(
+    css,
+    /\.footer-logo\s*>\s*span\s*\{([^}]+)\}/i,
+    'footer wordmark rule',
+    path.join(ROOT, 'css', 'style.css')
+  );
+
+  assert.match(footerWordmarkRule, /color\s*:\s*var\(--text-main\)\s*;/i);
+  assert.match(footerWordmarkRule, /opacity\s*:\s*1\s*;/i);
+});
+
 test('release manifest contains verifiable desktop artifacts', () => {
   for (const platform of ['windows', 'macos', 'linux']) {
     const release = releases.platforms[platform];
