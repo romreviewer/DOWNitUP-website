@@ -13,10 +13,9 @@ crawlability, indexing, and **backlinks**. Work through this list in order.
 - [ ] Use Search Console's **URL Inspection → Request Indexing** on:
       `/`, `/idm-alternative`, `/fdm-alternative`, `/torrent-downloader`,
       `/download-windows`, `/download-mac`.
-- [ ] Confirm the site is served over **HTTPS with a valid certificate** and that
-      `http://` and `www.` variants 301-redirect to `https://downitup.com`. (The
-      current `nginx.conf` only listens on port 80 — add an HTTPS server block with
-      Let's Encrypt / Certbot if not already handled by Cloudflare.)
+- [ ] Merge the canonical redirect locations from `nginx.conf` into the active TLS
+      server block, then confirm HTTP, `www`, `.html`, and trailing-slash variants
+      return one-hop 301 redirects to `https://downitup.com/<clean-path>`.
 - [ ] Check `https://downitup.com/robots.txt` and `/sitemap.xml` return 200 in production.
 
 ## 2. High-value listing sites (biggest backlink wins)
@@ -31,9 +30,10 @@ These are the sites Google already ranks for "download manager" and
 - [ ] **Product Hunt** — launch the desktop app (good spike + permanent backlink).
 - [ ] **Softpedia, MajorGeeks, FileHorse, Uptodown, FossHub** — software directories
       that accept free submissions and are trusted by Google for software queries.
-- [ ] **SourceForge / GitHub** — if the desktop app is open source, a well-maintained
-      GitHub repo (README with keywords + link to downitup.com) ranks on its own.
-- [ ] **SaaSHub, Stackshare, LibHunt** (if open source).
+- [ ] **SourceForge / GitHub Releases** — maintain accurate versioned binaries,
+      release notes, file sizes, and checksums that link back to downitup.com.
+- [ ] **SaaSHub and Stackshare** — describe DOWNitUP accurately as freeware; do not
+      select open-source categories or badges.
 - [ ] Wikipedia — only once the app has independent press coverage (don't self-add).
 
 ## 3. Community seeding (do genuinely, not spammy)
@@ -48,9 +48,12 @@ These are the sites Google already ranks for "download manager" and
 
 - [ ] Ask early users for **reviews** on the Play Store and listing sites — ratings
       and review counts are ranking signals on those platforms.
-- [ ] Consider a small blog/changelog section (e.g. "IDM vs FDM vs DOWNitUP",
-      "How to speed up downloads") — comparison content captures long-tail traffic.
+- [x] ~~Consider a small blog/changelog section~~ — done: `/blog` with 6 guides/comparisons
+      plus an `/about` page were added (2026-08). Add new articles over time (e.g. more
+      comparison content) to capture long-tail traffic.
 - [ ] Keep `sitemap.xml` updated whenever new pages are added.
+- [ ] Update `releases.json` for every release; download pages and the desktop update
+      API use it as their shared release source.
 
 ## 5. Measure
 

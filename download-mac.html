@@ -10,6 +10,17 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="DOWNitUP">
     <link rel="canonical" href="https://downitup.com/download-mac">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DOWNitUP Download Manager for macOS">
+    <meta property="og:description" content="Download the free, ad-free DOWNitUP desktop beta for Apple Silicon and Intel Macs.">
+    <meta property="og:url" content="https://downitup.com/download-mac">
+    <meta property="og:image" content="https://downitup.com/assets/app_icon.png">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"DOWNitUP for macOS","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS 11 or later","url":"https://downitup.com/download-mac","downloadUrl":"https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/DOWNitUP-1.0.1.dmg","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Beta download manager for macOS with direct downloads, torrents, resume support and up to 16 parallel connections."}
+    </script>
+    <meta name="google-adsense-account" content="ca-pub-1963707717069953">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1963707717069953"
+        crossorigin="anonymous"></script>
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,15 +37,16 @@
     <!-- Navbar -->
     <nav class="navbar scrolled">
         <div class="nav-container">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="assets/app_icon.png" alt="DOWNitUP Logo" class="logo-img">
                 <span class="logo-text">DOWNitUP</span>
             </a>
             <div class="nav-links">
-                <a href="index.html#features">Features</a>
-                <a href="index.html#comparison">Compare</a>
-                <a href="index.html#platforms">Platforms</a>
-                <a href="index.html#platforms" class="btn btn-primary nav-cta">Get DOWNitUP</a>
+                <a href="/#features">Features</a>
+                <a href="/#comparison">Compare</a>
+                <a href="/#platforms">Platforms</a>
+                <a href="/blog">Blog</a>
+                <a href="/#platforms" class="btn btn-primary nav-cta">Get DOWNitUP</a>
             </div>
             <!-- Mobile Menu Toggle -->
             <button class="mobile-toggle" aria-label="Toggle Navigation">
@@ -53,11 +65,11 @@
         <div class="download-page-container">
             <div class="download-header">
                 <h1>Starting your <span class="text-gradient">macOS Download</span></h1>
-                <p>Thank you for choosing DOWNitUP. Get ready for 16x faster downloads.</p>
+                <p>Beta release with direct downloads, torrents, resume support, and up to 16 parallel connections.</p>
             </div>
 
             <!-- Countdown / Card -->
-            <div class="download-card glass-panel">
+            <div class="download-card glass-panel" data-release-platform="macos" data-release-format="DMG">
                 <div class="countdown-container">
                     <div class="countdown-number" id="countdown-number">5</div>
                     <div class="countdown-text" id="countdown-text">Downloading starting in 5 seconds...</div>
@@ -67,8 +79,9 @@
                 </div>
                 <p class="manual-download-text">
                     If your download didn't start automatically, please 
-                    <a href="https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/DOWNitUP-1.0.1.dmg" id="manual-link">click here to download manually</a>.
+                    <a href="https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/DOWNitUP-1.0.1.dmg" id="manual-link" data-release-link>click here to download manually</a>.
                 </p>
+                <div class="artifact-details">Version <span data-release-version>1.0.1</span> beta · <span data-release-size>133.5 MB</span> · SHA-256<code data-release-sha256>72ff21ff4840e5d5558620284f8fca766262ac1b8a41726ed2cfacc42d0b5dc5</code></div>
                 <div style="margin-top: 4px;">
                     <a href="#instructions" class="btn btn-secondary btn-small" style="font-size: 0.85rem; padding: 8px 16px; border-radius: 8px;">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: middle;">
@@ -92,7 +105,7 @@
                 </div>
                 <div class="notice-content">
                     <h3>Important Notice: Unsigned Beta App</h3>
-                    <p>To keep DOWNitUP completely free, open-source, and ad-free for everyone, we have not purchased an Apple Developer License for this beta release. Because the app is unsigned, macOS Gatekeeper will block it initially. However, the app is 100% safe, open-source, and does not collect any user telemetry.</p>
+                    <p>DOWNitUP desktop is a free, ad-free beta distributed as a versioned binary. This build is not currently notarized, so macOS Gatekeeper may block it initially. Verify its SHA-256 checksum in <a href="/releases.json">the release manifest</a> and proceed only if you downloaded it from the official release link.</p>
                 </div>
             </div>
 
@@ -149,6 +162,66 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Getting Started Section -->
+            <section class="instructions-section">
+                <h2 class="instructions-title">Getting Started <span class="text-gradient">After Install</span></h2>
+                <div class="steps-grid">
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">1</div>
+                        <div class="step-details">
+                            <h4>Add your first download</h4>
+                            <p>Start a new download in the app and paste a direct <span class="step-highlight">HTTP link</span> to a file, or drop in a <span class="step-highlight">magnet link</span> to begin a torrent. DOWNitUP handles both from the same window.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">2</div>
+                        <div class="step-details">
+                            <h4>Find your files</h4>
+                            <p>Completed downloads are saved to your <span class="step-highlight">Downloads folder</span> by default. Once a transfer finishes, you can open the file's location directly from the app.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">3</div>
+                        <div class="step-details">
+                            <h4>Speed and resume</h4>
+                            <p>DOWNitUP splits files into multiple connections to accelerate transfers, and keeps track of progress automatically. If your connection drops or you quit the app, downloads pick up right where they left off.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Troubleshooting Section -->
+            <section class="instructions-section">
+                <h2 class="instructions-title">Trouble<span class="text-gradient">shooting</span></h2>
+                <div class="steps-grid">
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">1</div>
+                        <div class="step-details">
+                            <h4>"Unidentified developer" warning</h4>
+                            <p>Because this beta release is unsigned, Gatekeeper may block the first launch. Instead of double-clicking, <span class="step-highlight">right-click the app and choose Open</span>, or go to <span class="step-highlight">System Settings → Privacy & Security</span> and click <span class="step-highlight">Open Anyway</span>. You only need to do this once.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">2</div>
+                        <div class="step-details">
+                            <h4>Apple Silicon or Intel?</h4>
+                            <p>No need to choose. The <span class="step-highlight">DMG linked above</span> is the only macOS build and runs on both Apple Silicon and Intel Macs.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">3</div>
+                        <div class="step-details">
+                            <h4>Downloads are slow</h4>
+                            <p>Slow speeds are usually caused by the source server or your network rather than the app. See our guide on <a href="/blog/how-to-speed-up-slow-downloads">how to speed up slow downloads</a> for practical fixes.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -165,9 +238,9 @@
             <div class="footer-links">
                 <div class="links-column">
                     <h4>Product</h4>
-                    <a href="index.html#features">Features</a>
-                    <a href="index.html#comparison">Compare</a>
-                    <a href="index.html#platforms">Download</a>
+                    <a href="/#features">Features</a>
+                    <a href="/#comparison">Compare</a>
+                    <a href="/#platforms">Download</a>
                 </div>
                 <div class="links-column">
                     <h4>Compare</h4>
@@ -176,8 +249,13 @@
                     <a href="/torrent-downloader">Torrent Downloader</a>
                 </div>
                 <div class="links-column">
+                    <h4>Resources</h4>
+                    <a href="/blog">Blog</a>
+                    <a href="/about">About</a>
+                </div>
+                <div class="links-column">
                     <h4>Support</h4>
-                    <a href="index.html#faq">FAQ</a>
+                    <a href="/#faq">FAQ</a>
                     <a href="mailto:contact@downitup.com">Contact</a>
                 </div>
                 <div class="links-column">
@@ -191,6 +269,7 @@
         </div>
     </footer>
 
+    <script src="/js/release-data.js"></script>
     <!-- Countdown & Nav Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -200,8 +279,6 @@
             const manualLink = document.getElementById('manual-link');
             
             let timeLeft = 5;
-            const downloadUrl = manualLink.href;
-
             const countdownInterval = setInterval(() => {
                 timeLeft--;
                 if (timeLeft >= 0) {
@@ -214,7 +291,7 @@
                     clearInterval(countdownInterval);
                     countdownTextEl.textContent = 'Your download has started!';
                     // Trigger download
-                    window.location.href = downloadUrl;
+                    window.location.href = manualLink.href;
                 }
             }, 1000);
 

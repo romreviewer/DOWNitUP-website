@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node --test"
+    "test": "node --test",
+    "seo:check": "node --test seo-audit.test.js"
   },
   "engines": {
     "node": ">=18"

@@ -9,7 +9,19 @@
         content="Free download of DOWNitUP for Windows. Follow our easy guide to install the free, fast download manager and torrent client on your PC.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="DOWNitUP">
+    <meta name="google-adsense-account" content="ca-pub-1963707717069953">
     <link rel="canonical" href="https://downitup.com/download-windows">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DOWNitUP Download Manager for Windows">
+    <meta property="og:description" content="Download the free, ad-free DOWNitUP desktop beta for Windows 10 and 11.">
+    <meta property="og:url" content="https://downitup.com/download-windows">
+    <meta property="og:image" content="https://downitup.com/assets/app_icon.png">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"DOWNitUP for Windows","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10 and Windows 11, 64-bit","url":"https://downitup.com/download-windows","downloadUrl":"https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/DOWNitUP-1.0.1.msi","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Beta download manager for Windows with direct downloads, torrents, resume support and up to 16 parallel connections."}
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1963707717069953"
+        crossorigin="anonymous"></script>
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,15 +38,16 @@
     <!-- Navbar -->
     <nav class="navbar scrolled">
         <div class="nav-container">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="assets/app_icon.png" alt="DOWNitUP Logo" class="logo-img">
                 <span class="logo-text">DOWNitUP</span>
             </a>
             <div class="nav-links">
-                <a href="index.html#features">Features</a>
-                <a href="index.html#comparison">Compare</a>
-                <a href="index.html#platforms">Platforms</a>
-                <a href="index.html#platforms" class="btn btn-primary nav-cta">Get DOWNitUP</a>
+                <a href="/#features">Features</a>
+                <a href="/#comparison">Compare</a>
+                <a href="/#platforms">Platforms</a>
+                <a href="/blog">Blog</a>
+                <a href="/#platforms" class="btn btn-primary nav-cta">Get DOWNitUP</a>
             </div>
             <!-- Mobile Menu Toggle -->
             <button class="mobile-toggle" aria-label="Toggle Navigation">
@@ -53,11 +66,11 @@
         <div class="download-page-container">
             <div class="download-header">
                 <h1>Starting your <span class="text-gradient">Windows Download</span></h1>
-                <p>Thank you for choosing DOWNitUP. Get ready for 16x faster downloads.</p>
+                <p>Beta release with direct downloads, torrents, resume support, and up to 16 parallel connections.</p>
             </div>
 
             <!-- Countdown / Card -->
-            <div class="download-card glass-panel">
+            <div class="download-card glass-panel" data-release-platform="windows" data-release-format="MSI">
                 <div class="countdown-container">
                     <div class="countdown-number" id="countdown-number">5</div>
                     <div class="countdown-text" id="countdown-text">Downloading starting in 5 seconds...</div>
@@ -67,8 +80,9 @@
                 </div>
                 <p class="manual-download-text">
                     If your download didn't start automatically, please 
-                    <a href="https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/DOWNitUP-1.0.1.msi" id="manual-link">click here to download manually</a>.
+                    <a href="https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/DOWNitUP-1.0.1.msi" id="manual-link" data-release-link>click here to download manually</a>.
                 </p>
+                <div class="artifact-details">Version <span data-release-version>1.0.1</span> beta · <span data-release-size>122.5 MB</span> · SHA-256<code data-release-sha256>76d342489b99b400bbbf33566646d3acefe3ebfa8e04997cc667980a5b283646</code></div>
                 <div style="margin-top: 4px;">
                     <a href="#instructions" class="btn btn-secondary btn-small" style="font-size: 0.85rem; padding: 8px 16px; border-radius: 8px;">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: middle;">
@@ -92,7 +106,7 @@
                 </div>
                 <div class="notice-content">
                     <h3>Important Notice: Unsigned Beta App</h3>
-                    <p>To keep DOWNitUP completely free, open-source, and ad-free for everyone, we have not purchased a Microsoft Code Signing Certificate for this beta release. Because the setup program is unsigned, Windows SmartScreen will flag it initially. However, the app is 100% safe, open-source, and does not collect any user data.</p>
+                    <p>DOWNitUP desktop is a free, ad-free beta distributed as a versioned binary. This installer is not currently code-signed, so Windows SmartScreen may show an unrecognized-app warning. Verify its SHA-256 checksum in <a href="/releases.json">the release manifest</a> and proceed only if you downloaded it from the official release link.</p>
                 </div>
             </div>
 
@@ -149,6 +163,66 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Getting Started Section -->
+            <section class="instructions-section">
+                <h2 class="instructions-title">Getting Started <span class="text-gradient">After Install</span></h2>
+                <div class="steps-grid">
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">1</div>
+                        <div class="step-details">
+                            <h4>Add your first download</h4>
+                            <p>Open DOWNitUP and paste any HTTP or HTTPS link to add it to your queue. You can also paste a magnet link, and DOWNitUP will handle it as a torrent download with no extra setup required.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">2</div>
+                        <div class="step-details">
+                            <h4>Find your downloaded files</h4>
+                            <p>Finished downloads are saved to your Downloads folder by default. You can open the containing folder for any completed item directly from the app, or change the save location in the settings.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">3</div>
+                        <div class="step-details">
+                            <h4>Speed and resume, handled for you</h4>
+                            <p>DOWNitUP splits supported downloads into multiple connections that run in parallel, which is how it reaches speeds far beyond a single browser download. If your connection drops or your PC restarts, interrupted downloads resume from where they stopped instead of starting over.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Troubleshooting Section -->
+            <section class="instructions-section">
+                <h2 class="instructions-title">Trouble<span class="text-gradient">shooting</span></h2>
+                <div class="steps-grid">
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">1</div>
+                        <div class="step-details">
+                            <h4>Windows SmartScreen shows a warning</h4>
+                            <p>SmartScreen flags apps that are new or not yet widely downloaded, even when they are perfectly safe. Because this beta release is unsigned, Windows will show the warning initially. Click <span class="step-highlight">More info</span>, then <span class="step-highlight">Run anyway</span> to continue with the installation.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">2</div>
+                        <div class="step-details">
+                            <h4>The installer won't run</h4>
+                            <p>The Windows build of DOWNitUP is a 64-bit installer. Make sure you downloaded the 64-bit .msi file and that you are running a 64-bit edition of Windows 10 or 11, which covers virtually all modern PCs.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card glass-panel">
+                        <div class="step-badge">3</div>
+                        <div class="step-details">
+                            <h4>Downloads are slower than expected</h4>
+                            <p>Slow speeds are usually caused by the server, your network, or other apps competing for bandwidth rather than the download manager itself. See our guide on <a href="/blog/how-to-speed-up-slow-downloads">how to speed up slow downloads</a> for practical fixes.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -165,9 +239,9 @@
             <div class="footer-links">
                 <div class="links-column">
                     <h4>Product</h4>
-                    <a href="index.html#features">Features</a>
-                    <a href="index.html#comparison">Compare</a>
-                    <a href="index.html#platforms">Download</a>
+                    <a href="/#features">Features</a>
+                    <a href="/#comparison">Compare</a>
+                    <a href="/#platforms">Download</a>
                 </div>
                 <div class="links-column">
                     <h4>Compare</h4>
@@ -176,8 +250,13 @@
                     <a href="/torrent-downloader">Torrent Downloader</a>
                 </div>
                 <div class="links-column">
+                    <h4>Resources</h4>
+                    <a href="/blog">Blog</a>
+                    <a href="/about">About</a>
+                </div>
+                <div class="links-column">
                     <h4>Support</h4>
-                    <a href="index.html#faq">FAQ</a>
+                    <a href="/#faq">FAQ</a>
                     <a href="mailto:contact@downitup.com">Contact</a>
                 </div>
                 <div class="links-column">
@@ -191,6 +270,7 @@
         </div>
     </footer>
 
+    <script src="/js/release-data.js"></script>
     <!-- Countdown & Nav Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -200,8 +280,6 @@
             const manualLink = document.getElementById('manual-link');
             
             let timeLeft = 5;
-            const downloadUrl = manualLink.href;
-
             const countdownInterval = setInterval(() => {
                 timeLeft--;
                 if (timeLeft >= 0) {
@@ -214,7 +292,7 @@
                     clearInterval(countdownInterval);
                     countdownTextEl.textContent = 'Your download has started!';
                     // Trigger download
-                    window.location.href = downloadUrl;
+                    window.location.href = manualLink.href;
                 }
             }, 1000);
 

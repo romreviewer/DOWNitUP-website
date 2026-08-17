@@ -1,13 +1,17 @@
 'use strict';
 
+const releaseManifest = require('./releases.json');
+
+const desktopManifest = releaseManifest.platforms.windows;
+
 const DEFAULT_RELEASE = Object.freeze({
-  versionCode: 2,
-  versionName: '1.0.1',
+  versionCode: desktopManifest.versionCode,
+  versionName: desktopManifest.version,
   title: 'Update available',
   message: 'DOWNitUP 1.0.1 is available. Download the latest version from the website.',
-  downloadUrl: 'https://downitup.com',
-  releaseNotesUrl: 'https://downitup.com/releases',
-  publishedAt: '2026-08-03T00:00:00Z'
+  downloadUrl: 'https://downitup.com/download-windows',
+  releaseNotesUrl: desktopManifest.releaseNotesUrl,
+  publishedAt: desktopManifest.releaseDate
 });
 
 const PLATFORMS = new Set(['macos', 'windows', 'linux', 'unknown']);

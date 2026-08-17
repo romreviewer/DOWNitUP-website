@@ -1,0 +1,81 @@
+{
+  "updatedAt": "2026-08-03T15:04:42Z",
+  "platforms": {
+    "android": {
+      "status": "stable",
+      "version": "1.11.0",
+      "minimumSystem": "Android 7.0+",
+      "monetization": "Free core app with optional rewarded ads and optional in-app support",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.romreviewertools.downitup"
+    },
+    "windows": {
+      "status": "beta",
+      "versionCode": 2,
+      "version": "1.0.1",
+      "releaseDate": "2026-08-02T20:28:48Z",
+      "minimumSystem": "Windows 10/11 (64-bit)",
+      "monetization": "Free and ad-free",
+      "releaseNotesUrl": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/tag/v1.0.1",
+      "artifacts": [
+        {
+          "format": "MSI",
+          "architecture": "x64",
+          "url": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/DOWNitUP-1.0.1.msi",
+          "sizeBytes": 122514967,
+          "sha256": "76d342489b99b400bbbf33566646d3acefe3ebfa8e04997cc667980a5b283646"
+        }
+      ]
+    },
+    "macos": {
+      "status": "beta",
+      "versionCode": 2,
+      "version": "1.0.1",
+      "releaseDate": "2026-08-02T20:28:48Z",
+      "minimumSystem": "macOS 11+ (Apple Silicon and Intel)",
+      "monetization": "Free and ad-free",
+      "releaseNotesUrl": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/tag/v1.0.1",
+      "artifacts": [
+        {
+          "format": "DMG",
+          "architecture": "universal",
+          "url": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/DOWNitUP-1.0.1.dmg",
+          "sizeBytes": 133452919,
+          "sha256": "72ff21ff4840e5d5558620284f8fca766262ac1b8a41726ed2cfacc42d0b5dc5"
+        }
+      ]
+    },
+    "linux": {
+      "status": "beta",
+      "versionCode": 2,
+      "version": "1.0.1",
+      "releaseDate": "2026-08-03T15:04:42Z",
+      "minimumSystem": "Modern 64-bit Linux distribution",
+      "monetization": "Free and ad-free",
+      "releaseNotesUrl": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/tag/v1.0.1",
+      "artifacts": [
+        {
+          "format": "DEB",
+          "architecture": "x64",
+          "url": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/downitup_1.0.1_amd64.deb",
+          "sizeBytes": 116443270,
+          "sha256": "c0ead23fdec3ba2f8bea0866db08faedbbeda48fcb6b3d70ddf1aeeb80004873"
+        },
+        {
+          "format": "AppImage",
+          "architecture": "x64",
+          "url": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/downitup_1.0.1_amd64.AppImage",
+          "sizeBytes": 130151616,
+          "sha256": "fe815ebb20dfad6c7926d7de082472e7e5740d96f71923ea4f230c3eb0c22128"
+        }
+      ]
+    }
+  },
+  "browserExtensions": {
+    "firefox": {
+      "status": "beta",
+      "version": "0.1.0",
+      "url": "https://addons.mozilla.org/firefox/addon/downitup-browser-integration/",
+      "requiresDesktopApp": true
+    }
+  }
+}

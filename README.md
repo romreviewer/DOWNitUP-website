@@ -1,6 +1,6 @@
 # DOWNitUP Website
 
-Landing page for [DOWNitUP](https://play.google.com/store/apps/details?id=com.romreviewertools.downitup) — a free, fast download manager and torrent client for Android (desktop coming soon).
+Website and desktop update API for [DOWNitUP](https://downitup.com), a cross-platform download manager and torrent client. Android is stable; Windows, macOS, and Linux builds are currently beta.
 
 ## Features
 

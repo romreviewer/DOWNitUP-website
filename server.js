@@ -27,10 +27,14 @@ const MIME_TYPES = new Map([
 ]);
 
 const PRIVATE_FILES = new Set([
+  'README.md',
+  'SEO-CHECKLIST.md',
+  'nginx.conf',
   'package.json',
   'server.js',
   'update-api.js',
-  'update-api.test.js'
+  'update-api.test.js',
+  'seo-audit.test.js'
 ]);
 
 function sendJson(res, status, body) {
@@ -229,6 +233,22 @@ function handlePlaystoreVersionRequest(req, res) {
 
 function requestListener(req, res) {
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+
+  const hostname = (req.headers.host || '').split(':')[0].toLowerCase();
+  if (hostname === 'www.downitup.com') {
+    res.writeHead(301, { Location: `https://downitup.com${url.pathname}${url.search}` });
+    res.end();
+    return;
+  }
+
+  if (url.pathname !== '/' && (url.pathname.endsWith('.html') || url.pathname.endsWith('/'))) {
+    const cleanPath = url.pathname.endsWith('.html')
+      ? url.pathname.slice(0, -5)
+      : url.pathname.slice(0, -1);
+    res.writeHead(301, { Location: `${cleanPath}${url.search}` });
+    res.end();
+    return;
+  }
 
   if (url.pathname === '/api/playstore-version') {
     if (req.method !== 'GET') {
