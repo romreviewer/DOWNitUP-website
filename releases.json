@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-03T15:04:42Z",
+  "updatedAt": "2026-10-25T12:02:51Z",
   "platforms": {
     "android": {
       "status": "stable",
@@ -10,19 +10,19 @@
     },
     "windows": {
       "status": "beta",
-      "versionCode": 2,
-      "version": "1.0.1",
-      "releaseDate": "2026-08-02T20:28:48Z",
+      "versionCode": 5,
+      "version": "1.2.0",
+      "releaseDate": "2026-10-25T12:02:51Z",
       "minimumSystem": "Windows 10/11 (64-bit)",
       "monetization": "Free and ad-free",
-      "releaseNotesUrl": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/tag/v1.0.1",
+      "releaseNotesUrl": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/tag/v1.2.0",
       "artifacts": [
         {
           "format": "MSI",
           "architecture": "x64",
-          "url": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/DOWNitUP-1.0.1.msi",
-          "sizeBytes": 122514967,
-          "sha256": "76d342489b99b400bbbf33566646d3acefe3ebfa8e04997cc667980a5b283646"
+          "url": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.2.0/DOWNitUP-1.2.0-windows-x64.msi",
+          "sizeBytes": 159565753,
+          "sha256": "99cca019681afc78ac180fd90e8a1de546c0ae82ed69ac9366c907b29e2d24bb"
         }
       ]
     },
@@ -46,26 +46,19 @@
     },
     "linux": {
       "status": "beta",
-      "versionCode": 2,
-      "version": "1.0.1",
-      "releaseDate": "2026-08-03T15:04:42Z",
-      "minimumSystem": "Modern 64-bit Linux distribution",
+      "versionCode": 5,
+      "version": "1.2.0",
+      "releaseDate": "2026-10-25T12:02:51Z",
+      "minimumSystem": "Ubuntu 24.04+ or compatible amd64 distribution with glibc 2.38+",
       "monetization": "Free and ad-free",
-      "releaseNotesUrl": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/tag/v1.0.1",
+      "releaseNotesUrl": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/tag/v1.2.0",
       "artifacts": [
         {
           "format": "DEB",
           "architecture": "x64",
-          "url": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/downitup_1.0.1_amd64.deb",
-          "sizeBytes": 116443270,
-          "sha256": "c0ead23fdec3ba2f8bea0866db08faedbbeda48fcb6b3d70ddf1aeeb80004873"
-        },
-        {
-          "format": "AppImage",
-          "architecture": "x64",
-          "url": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/downitup_1.0.1_amd64.AppImage",
-          "sizeBytes": 130151616,
-          "sha256": "fe815ebb20dfad6c7926d7de082472e7e5740d96f71923ea4f230c3eb0c22128"
+          "url": "https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.2.0/DOWNitUP-1.2.0-linux-amd64.deb",
+          "sizeBytes": 145914816,
+          "sha256": "fbac6ea9e8ab21e51ccd259c8a70f61251feb5694b72cd6c7a2ae3821e4a901e"
         }
       ]
     }

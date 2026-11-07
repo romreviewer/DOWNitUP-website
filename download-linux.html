@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download DOWNitUP for Linux | Free & Fast Download Manager</title>
     <meta name="description"
-        content="Free download of DOWNitUP for Linux. Install the free, fast download manager and torrent client on any modern distribution via .deb package or AppImage.">
+        content="Free download of DOWNitUP for Linux. Install the free, fast download manager and torrent client on Ubuntu 24.04+ or compatible amd64 distributions with glibc 2.38+ via a .deb package.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="DOWNitUP">
     <meta name="google-adsense-account" content="ca-pub-1963707717069953">
     <link rel="canonical" href="https://downitup.com/download-linux">
     <meta property="og:type" content="website">
     <meta property="og:title" content="DOWNitUP Download Manager for Linux">
-    <meta property="og:description" content="Download the free, ad-free DOWNitUP desktop beta as a DEB or AppImage.">
+    <meta property="og:description" content="Download the free, ad-free DOWNitUP desktop beta as a DEB for Ubuntu 24.04+ with glibc 2.38+.">
     <meta property="og:url" content="https://downitup.com/download-linux">
     <meta property="og:image" content="https://downitup.com/assets/app_icon.png">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"DOWNitUP for Linux","applicationCategory":"UtilitiesApplication","operatingSystem":"64-bit Linux","url":"https://downitup.com/download-linux","downloadUrl":"https://downitup.com/download-linux","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Beta download manager for Linux with direct downloads, torrents, resume support and up to 16 parallel connections."}
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"DOWNitUP for Linux","applicationCategory":"UtilitiesApplication","operatingSystem":"Ubuntu 24.04+ or compatible amd64 Linux with glibc 2.38+","url":"https://downitup.com/download-linux","downloadUrl":"https://downitup.com/download-linux","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Beta download manager for Linux with direct downloads, torrents, resume support and up to 16 parallel connections."}
     </script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1963707717069953"
@@ -66,24 +66,21 @@
         <div class="download-page-container">
             <div class="download-header">
                 <h1>Download DOWNitUP for <span class="text-gradient">Linux</span></h1>
-                <p>Choose your package format. Both are free and include HTTP + torrent downloads.</p>
+                <p>Download the free DEB package with HTTP + torrent downloads for Ubuntu 24.04+ (amd64).</p>
             </div>
 
             <!-- Download Options -->
-            <div class="download-card glass-panel">
+            <div class="download-card glass-panel" data-release-platform="linux" data-release-format="DEB">
                 <div class="hero-cta-group" style="justify-content: center; display: flex;">
-                    <a href="https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/downitup_1.0.1_amd64.deb"
-                        class="btn btn-glow btn-large">Download .deb (Debian/Ubuntu)</a>
-                    <a href="https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.1/downitup_1.0.1_amd64.AppImage"
-                        class="btn btn-secondary btn-large">Download AppImage (Any distro)</a>
+                    <a href="https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.2.0/DOWNitUP-1.2.0-linux-amd64.deb"
+                        class="btn btn-glow btn-large" data-release-link>Download .deb (Ubuntu 24.04+)</a>
                 </div>
                 <p class="manual-download-text" style="margin-top: 16px;">
-                    Version 1.0.1 beta (64-bit). Verify file sizes and SHA-256 checksums in the
-                    <a href="/releases.json">release manifest</a>. Not sure which to pick? Use the AppImage.
+                    Version <span data-release-version>1.2.0</span> beta (64-bit). Requires glibc 2.38 or newer (Ubuntu 24.04+). Verify file sizes and SHA-256 checksums in the
+                    <a href="/releases.json">release manifest</a>. Ubuntu 22.04 and Debian 12 are unsupported. This release has no AppImage.
                 </p>
                 <div class="authority-grid">
-                    <div class="artifact-details" data-release-platform="linux" data-release-format="DEB">DEB · Version <span data-release-version>1.0.1</span> · <span data-release-size>116.4 MB</span><code data-release-sha256>c0ead23fdec3ba2f8bea0866db08faedbbeda48fcb6b3d70ddf1aeeb80004873</code></div>
-                    <div class="artifact-details" data-release-platform="linux" data-release-format="AppImage">AppImage · Version <span data-release-version>1.0.1</span> · <span data-release-size>130.2 MB</span><code data-release-sha256>fe815ebb20dfad6c7926d7de082472e7e5740d96f71923ea4f230c3eb0c22128</code></div>
+                    <div class="artifact-details" data-release-platform="linux" data-release-format="DEB">DEB · Version <span data-release-version>1.2.0</span> · <span data-release-size>145.9 MB</span><code data-release-sha256>fbac6ea9e8ab21e51ccd259c8a70f61251feb5694b72cd6c7a2ae3821e4a901e</code></div>
                 </div>
             </div>
 
@@ -95,8 +92,8 @@
                         <div class="step-badge">1</div>
                         <div class="step-details">
                             <h4>.deb: install the package</h4>
-                            <p>On Debian, Ubuntu, or derivatives, open a terminal in your Downloads folder and run
-                                <span class="step-highlight">sudo dpkg -i downitup_1.0.1_amd64.deb</span>. Fix any
+                            <p>On Ubuntu 24.04+ or a compatible distribution with glibc 2.38+, open a terminal in your Downloads folder and run
+                                <span class="step-highlight">sudo dpkg -i DOWNitUP-1.2.0-linux-amd64.deb</span>. Fix any
                                 missing dependencies with <span class="step-highlight">sudo apt --fix-broken
                                     install</span>.</p>
                         </div>
@@ -105,9 +102,9 @@
                     <div class="step-card glass-panel">
                         <div class="step-badge">2</div>
                         <div class="step-details">
-                            <h4>AppImage: make it executable</h4>
-                            <p>Run <span class="step-highlight">chmod +x downitup_1.0.1_amd64.AppImage</span>, then
-                                double-click the file or launch it from the terminal. No installation required.</p>
+                            <h4>Complete installation</h4>
+                            <p>If dependencies are missing, run <span class="step-highlight">sudo apt --fix-broken install</span>
+                                to finish installing the package.</p>
                         </div>
                     </div>
 
@@ -115,7 +112,7 @@
                         <div class="step-badge">3</div>
                         <div class="step-details">
                             <h4>Launch DOWNitUP</h4>
-                            <p>Open DOWNitUP from your applications menu (.deb) or by running the AppImage. Add your
+                            <p>Open DOWNitUP from your applications menu. Add your
                                 first HTTP or magnet link download and use up to 16 parallel connections when supported.</p>
                         </div>
                     </div>
@@ -147,10 +144,9 @@
                     <div class="step-card glass-panel">
                         <div class="step-badge">1</div>
                         <div class="step-details">
-                            <h4>AppImage won't run</h4>
-                            <p>This is usually missing FUSE 2. On Debian/Ubuntu run <span class="step-highlight">sudo
-                                    apt install libfuse2</span>, then try again. Also make sure the file is executable:
-                                <span class="step-highlight">chmod +x downitup_1.0.1_amd64.AppImage</span>.</p>
+                            <h4>Unsupported Linux version</h4>
+                            <p>DOWNitUP 1.2.0 requires glibc 2.38 or newer, such as Ubuntu 24.04+. Ubuntu 22.04
+                                and Debian 12 are unsupported by the bundled torrent library. Upgrade to a supported distribution.</p>
                         </div>
                     </div>
 
@@ -167,10 +163,9 @@
                     <div class="step-card glass-panel">
                         <div class="step-badge">3</div>
                         <div class="step-details">
-                            <h4>AppImage not in your app menu</h4>
-                            <p>AppImages don't register themselves with your desktop. Use a tool like AppImageLauncher
-                                to integrate it automatically, or create a <span
-                                    class="step-highlight">.desktop</span> file pointing at the AppImage manually.</p>
+                            <h4>App not in your app menu</h4>
+                            <p>Confirm the DEB installation completed successfully and resolve any dependency errors.
+                                Sign out and back in if your applications menu has not refreshed.</p>
                         </div>
                     </div>
                 </div>

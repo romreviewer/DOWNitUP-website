@@ -8,7 +8,7 @@ const DEFAULT_RELEASE = Object.freeze({
   versionCode: desktopManifest.versionCode,
   versionName: desktopManifest.version,
   title: 'Update available',
-  message: 'DOWNitUP 1.0.1 is available. Download the latest version from the website.',
+  message: `DOWNitUP ${desktopManifest.version} is available. Download the latest version from the website.`,
   downloadUrl: 'https://downitup.com/download-windows',
   releaseNotesUrl: desktopManifest.releaseNotesUrl,
   publishedAt: desktopManifest.releaseDate

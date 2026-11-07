@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </svg>
                 Download for Windows
             `;
-            heroVersionText.textContent = 'v1.0.1 is available for Windows. Also available on macOS & Android.';
+            heroVersionText.textContent = 'v1.2.0 is available for Windows. Also available on macOS & Android.';
         } else if (os === 'mac') {
             mainDownloadBtn.href = 'download-mac';
             mainDownloadBtn.removeAttribute('target');
